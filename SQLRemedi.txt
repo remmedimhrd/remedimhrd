@@ -1,0 +1,87 @@
+CREATE TABLE `jcbpoint`.`jcb_user_login_db` (
+  `userid` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(45) NULL,
+  `userrole` VARCHAR(45) NULL,
+  PRIMARY KEY (`userid`));
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CREATE TABLE `jcbpoint`.`jcb_user_account_table` (
+  `userid` LONGINT NOT NULL AUTO_INCREMENT,
+  `userName` VARCHAR(45) NULL,
+  `phoneNumber` VARCHAR(45) NULL,
+  `emailId` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
+  `gender` VARCHAR(45) NULL,
+  `addressLine1` VARCHAR(45) NULL,
+  `addressLine2` VARCHAR(45) NULL,
+  `city` VARCHAR(45) NULL,
+  `state` VARCHAR(45) NULL,
+  `pincode` VARCHAR(45) NULL,
+  `createdBy` VARCHAR(45) NULL,
+  `createdTime` VARCHAR(45) NULL,
+  `modifiedBy` VARCHAR(45) NULL,
+  `modifiedTime` VARCHAR(45) NULL,
+  `status` VARCHAR(45) NULL,
+  PRIMARY KEY (`userid`));
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+CREATE TABLE medicines (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    medicineName VARCHAR(255),
+    medicineGenName VARCHAR(255),
+    manDate DATE,
+    expiryDate DATE,
+    quantity INT,
+    fileName VARCHAR(255)
+);
+
+
+
+CREATE TABLE IF NOT EXISTS requests (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    userName VARCHAR(255),
+    brandName VARCHAR(255),
+    genericName VARCHAR(255),
+    quantity INT,
+    phoneNumber VARCHAR(20),
+    deliveryAddress TEXT
+);
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+CREATE TABLE `jcbpoint`.`jcb_admin_account_table` (
+  `adminid` BIGINT NOT NULL AUTO_INCREMENT,
+  `userName` VARCHAR(45) NULL,
+  `phoneNumber` VARCHAR(45) NULL,
+  `emailId` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
+  `gender` VARCHAR(45) NULL,
+  `addressLine1` VARCHAR(45) NULL,
+  `addressLine2` VARCHAR(45) NULL,
+  `city` VARCHAR(45) NULL,
+  `state` VARCHAR(45) NULL,
+  `pincode` VARCHAR(45) NULL,
+  `createdBy` VARCHAR(45) NULL,
+  `createdTime` VARCHAR(45) NULL,
+  `modifiedBy` VARCHAR(45) NULL,
+  `modifiedTime` VARCHAR(45) NULL,
+  `status` VARCHAR(45) NULL,
+  PRIMARY KEY (`userid`));
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+CREATE TABLE `jcbpoint`.`jcb_adminaddress_list_table` (
+  `addressId` INT(11) NOT NULL AUTO_INCREMENT,
+  `addressLine1` VARCHAR(500) NULL,
+  `addressLine2` VARCHAR(500) NULL,
+  `city` VARCHAR(45) NULL,
+  `state` VARCHAR(45) NULL,
+  `pincode` VARCHAR(45) NULL,
+  `adminid` VARCHAR(45) NULL,
+  PRIMARY KEY (`addressId`));
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+CREATE TABLE `jcbpoint`.`jcb_admin_login_db` (
+  `adminid` VARCHAR(20) NOT NULL,
+  `password` VARCHAR(45) NULL,
+  `adminrole` VARCHAR(45) NULL,
+  PRIMARY KEY (`adminid`));
